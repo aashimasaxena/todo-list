@@ -1,0 +1,90 @@
+/*css sheet*/
+body{
+    background: #1F1C2C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #928DAB, #1F1C2C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Roboto', sans-serif;
+}
+
+/*for 'div'*/
+.container{
+    padding: 0;
+    width: 900px;
+    margin: 100px auto;
+    background-color: rgb(252, 252, 142); 
+    border: 2px solid rgb(184, 184, 184);
+    box-shadow:20px 20px 50px grey;
+}
+
+/*for main heading*/
+h1{
+    background-color: steelblue;
+    padding: 10px 10px;
+    margin: 0;
+    color: white;
+    font-size: 24px;
+}
+
+/*for 'plus' icon*/
+.fa-plus, .fa-minus{
+    float: right;
+}
+
+.fa-caret-square-o-down{
+    float: right;
+    padding-left: 5px;
+}
+.fa-caret-square-o-up{
+    float: right;
+    padding-left: 5px;
+}
+/*for 'add task' button*/
+#submit{
+    float: right;
+    margin: 10px 10px;
+}
+
+/*for <p> in each pt and ct 'div'*/
+p{
+    text-align: right;
+    padding: 2px;
+}
+
+/*for day(s)*/
+.days{
+    font-size: 12px;
+}
+
+/*ct and pt headings*/
+h3{
+ color: rgb(12, 52, 85);
+ font-weight: bold;
+ width: 300px;
+}
+
+
+/*for new todo-->task description*/
+input{
+    margin: 10px 10px;
+    font-size: 16px;
+    width: 30%;
+    color: rgba(0, 0, 0, 0.63);
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+input:hover{
+    outline: none;
+    border: 2px solid steelblue;
+}
+
+/*for 'completed-task' and 'pending-task' block*/
+.completed, .pending{
+    width: 100%;   
+    display: inline-block;
+    border-bottom: 1px dashed black;
+    border-top: 1px dashed black;
+    padding: 10px;
+}
+
+
+
+

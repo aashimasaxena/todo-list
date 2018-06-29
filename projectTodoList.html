@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial scale =1"> 
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>  
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel = "stylesheet" href = "projectTodoList.css">
+    </head>
+
+    <body>
+        <div class = "container">
+            <!--heading & button-->
+            <h1>TO-DO LIST <i class="fa fa-minus" aria-hidden="true"></i></h1>
+            <!--inputs for adding new task-->
+            <input id = "listTask" type = "text" placeholder = "Add New Todo" required/>
+            <input class = "listDate" type = "date" min = "2018-01-01" max = "2018-12-31" required/>
+            <button class = "btn btn-primary submitClick" type = "button" id = "submit">ADD TASK</button>
+
+            <!--pending task block-->
+            <div class = "pending">
+                <h3>PENDING TASKS</h3>
+                <!--text + dropdown-->
+                <p>Tasks due in: <select class = "ptDisplay"> 
+                                    <option>*select*</option>
+                                    <option>0</option>
+                                 </select><span class = "days">day(s)</span>
+                                 <i class="fa fa-caret-square-o-up" aria-hidden="true"></i>
+                </p>  
+                <!--table-->
+                <table class = "table pendingTaskTable">
+                    <thead>
+                        <tr id="task_header">
+                            <th>Task Description</th>
+                            <th style = "padding-left: 135px">Due Date</th>
+                            <th style = "text-align: center; padding-left: 60px">ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+            <!--completed task block-->
+            <div class = "completed">
+                <h3>COMPLETED TASKS</h3>
+                <!--text + dropdown-->
+                <p>Show completed tasks for last : <select class = "ctDisplay"> 
+                                    <option>*select*</option>
+                                    <option>0</option>
+                                 </select><span class = "days">day(s)</span>
+                                 <i class="fa fa-caret-square-o-up" aria-hidden="true"></i>
+                                </p>                
+                <table class = "table completedTaskTable">
+                    <thead>
+                        <tr>
+                            <th>Task Description</th>
+                            <th>Due Date</th>
+                            <th style = "text-align: center">Completed On</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    
+    
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCwW6v34nLNKgdm9rDJxAK4ve7uP0HYrNk",
+            authDomain: "to-do-list-project1.firebaseapp.com",
+            databaseURL: "https://to-do-list-project1.firebaseio.com",
+            projectId: "to-do-list-project1",
+            storageBucket: "to-do-list-project1.appspot.com",
+            messagingSenderId: "496605514996"
+        };
+        firebase.initializeApp(config);
+    </script>      
+    
+    <script src = "projectTodoList.js"></script>
+    </body>
+</html>
